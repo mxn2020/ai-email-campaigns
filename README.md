@@ -1,54 +1,94 @@
-# AI Email Campaign Generator & Optimizer
+# AI Email Campaign Generator
 
-## Pages & Features
+AI-optimized email campaign creation and performance tracking.
 
-### 1. Dashboard
-- Active campaigns & performance overview
-- Open rate, click rate, conversion rate summary
-- Revenue attributed to email campaigns
-- Upcoming scheduled sends
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Campaign Builder
-- AI-generated email copy from brief / product URL
-- Drag-and-drop email template editor
-- Subject line generator with A/B variants
-- Personalization merge tags (name, company, behavior)
-- Preview across devices (desktop, mobile)
+## Tech Stack
 
-### 3. Audience Manager
-- Contact list management with tags & segments
-- AI auto-segmentation by engagement level
-- Suppression & unsubscribe list management
-- Import / export contacts (CSV)
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. AI Optimization
-- Send time optimization per recipient
-- Subject line scoring & improvement suggestions
-- Content recommendations based on past performance
-- Auto-resend to non-openers with new subject
+## Getting Started
 
-### 5. Automation Flows
-- Visual workflow builder (welcome, nurture, re-engagement)
-- Trigger-based emails (signup, purchase, inactivity)
-- Conditional branching (opened, clicked, purchased)
-- Delay & wait step configuration
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. A/B Testing
-- Test subject lines, content, CTAs, send times
-- AI-recommended test variants
-- Auto-winner selection by target metric
-- Statistical significance indicator
+## License
 
-### 7. Analytics
-- Campaign-level performance breakdown
-- Subscriber engagement heatmap (click map)
-- Revenue per campaign & per subscriber segment
-- Deliverability & bounce rate tracking
-- Export as PDF / CSV
+MIT © Mehdi Nabhani
 
-### 8. Settings
-- Sender identity & domain authentication (SPF, DKIM)
-- Email provider integration (SMTP, SendGrid, Mailgun)
-- Compliance settings (CAN-SPAM, GDPR)
-- Brand template defaults
-- Team roles & permissions
+---
+
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
